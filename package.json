@@ -1,0 +1,51 @@
+{
+  "name": "@local/voice-wake",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hands-free wake-word voice commands for DeepSeek Harness",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yukiminya/dsh-voice-wake.git"
+  },
+  "homepage": "https://github.com/Yukiminya/dsh-voice-wake",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "voice",
+    "wake-word",
+    "speech"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-experimental-client-ui-voice-input"
+      ]
+    }
+  }
+}

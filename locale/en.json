@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Hands-free voice wake word",
+    "description": "Keep the microphone on: say “大肥鱼来”, get a short “来了” in an anime voice, then one sentence; it is sent and run after two seconds of silence. The row under the composer has the voice, the reply switch and live status; speech is recognized on this machine.",
+    "detail": "docs/DETAIL.md"
+  }
+}

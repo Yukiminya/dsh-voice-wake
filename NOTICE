@@ -1,0 +1,20 @@
+音频素材说明
+============
+
+本仓库的 client.js 内嵌了两段「来了」音频（base64 PCM16 WAV），是用
+sherpa-onnx (https://github.com/k2-fsa/sherpa-onnx) 运行社区 VITS 模型
+`vits-zh-hf-theresa` 合成的：
+
+  https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models
+
+该模型的转换来源标注为原神 / 崩坏3 相关语音训练集
+(https://huggingface.co/spaces/zomehwh/vits-models-genshin-bh3)。
+角色音色可能涉及第三方的形象与声音权利，因此这两段音频：
+
+- 只作为个人本机使用的效果示例提供；
+- 不在本仓库代码的 MIT 许可范围内；
+- 如果你要公开分发、商用或再分发，请自行替换成你有权使用的声音
+  （例如自己录制、开源 TTS 模型或已获授权的声音），从 client.js 的
+  WAKE_REPLIES 替换即可。
+
+其余代码（Host/Client 逻辑、界面、文档、图标）均为 MIT 许可。
